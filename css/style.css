@@ -1,0 +1,186 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* Start Colors */
+  --light-red-color: hsl(0, 100%, 67%);
+  --orange-yellow-color: hsl(39, 100%, 56%);
+  --green-teal-color: hsl(166, 100%, 37%);
+  --coblat-blue: hsl(234, 85%, 45%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+  /* End Colors */
+  /* Start Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+  /* End Gradients */
+  --main-transition: 0.3s;
+}
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--Pale-blue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* End Global Rules */
+/* Start Summary Sec */
+.summary {
+  width: 600px;
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  border-radius: 25px;
+}
+@media (max-width: 767px) {
+  .summary {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+}
+.summary > div {
+  flex-basis: 50%;
+  padding: 30px;
+}
+.summary .progress {
+  background-image: linear-gradient(to top, var(--Light-royal-blue), var(--Light-slate-blue));
+  border-radius: 25px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .summary .progress {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+.summary .progress > h3 {
+  color: var(--Light-lavender);
+}
+.summary .progress .counter {
+  background-image: linear-gradient(to top, var(--Persian-blue), var(--Violet-blue));
+  width: 150px;
+  height: 150px;
+  margin: 30px auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.summary .progress .counter > h3 {
+  color: white;
+  font-size: 60px;
+}
+.summary .progress .counter span {
+  color: var(--Light-lavender);
+  display: block;
+}
+.summary .progress > h3:nth-of-type(2) {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.summary .progress > p {
+  color: var(--Light-lavender);
+  padding: 10px;
+}
+.summary .description {
+  padding: 30px;
+}
+.summary .description h3 {
+  color: var(--Dark-gray-blue);
+  margin-bottom: 20px;
+}
+.summary .description .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+.summary .description .box.red {
+  background-color: rgba(255, 0, 0, 0.029);
+}
+.summary .description .box.yellow {
+  background-color: #ed9f0e0f;
+}
+.summary .description .box.green {
+  background-color: #00bd9112;
+}
+.summary .description .box.blue {
+  background-color: #4e21ca17;
+}
+.summary .description .box:not(:last-child) {
+  margin-bottom: 15px;
+}
+.summary .description .box .name {
+  display: flex;
+  align-items: center;
+}
+.summary .description .box .name img {
+  margin-right: 5px;
+}
+.summary .description .box .name > span {
+  font-size: 14px;
+  font-weight: 700;
+}
+.summary .description .box.red .name > span {
+  color: var(--light-red-color);
+}
+.summary .description .box.yellow .name > span {
+  color: var(--orange-yellow-color);
+}
+.summary .description .box.green .name > span {
+  color: var(--green-teal-color);
+}
+.summary .description .box.blue .name > span {
+  color: var(--Violet-blue);
+}
+.summary .description .box .number {
+  color: #9b9b9b;
+  font-weight: 600;
+  font-size: 15px;
+}
+.summary .description .box .number span {
+  color: var(--Dark-gray-blue);
+  font-weight: 800;
+}
+.summary .description a {
+  display: block;
+  background-color: var(--Dark-gray-blue);
+  padding: 15px;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 50px auto 0;
+}
+.summary .description a:hover {
+  background-image: linear-gradient(to top, var(--Light-royal-blue), var(--Light-slate-blue));
+}
+footer {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  font-size: 11px;
+}
+/* End Summary Sec */
